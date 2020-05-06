@@ -1,0 +1,12 @@
+.sidebox
+  .sidebox__namebox  
+    %p user
+    %div
+      = link_to "#", class: "sidebox__btn" do
+        = icon('far', 'edit')
+      = link_to "#", class: "sidebox__btn" do
+        = icon('fas', 'cog')
+  .sidebox__groups
+    .sidebox__groups__group
+      .sidebox__groups__group--name group
+      .sidebox__groups__group--message メッセージ

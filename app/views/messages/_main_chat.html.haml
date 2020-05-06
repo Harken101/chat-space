@@ -1,0 +1,30 @@
+.mainbox
+  .mainbox__header0
+    .mainbox__header0__info
+      .mainbox__header0__info--groupname 
+        test
+      .mainbox__header0__info--member
+        Member：
+        User
+    .mainbox__header0__info1
+      = link_to "#", class: "mainbox__header0__info1--edit" do 
+        .mainbox__header0__info1--edit--btn 
+          Edit
+  .mainbox__list
+    .mainbox__list__message
+      .mainbox__list__message__up
+        .mainbox__list__message__up--user
+          user
+        .mainbox__list__message__up--data
+          2020/05/06(Wed) 11:37:25
+      .mainbox__list__message--text
+        message
+  .mainbox__form
+    .mainbox__form__new
+      .mainbox__form__new__inputbox
+        %input{type: "text", class: "inputbox__text", placeholder: "type a message"}
+        %label{class: "inputbox__image"}
+          = icon("fas","image")
+          %input{type: "file", class: "inputbox__image__file"}
+      %input{type: "submit", class: "submit-btn", value: "Send"}
+
