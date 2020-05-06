@@ -57,3 +57,5 @@ gem 'haml-rails'
 
 # いずれの環境でも必要
 gem 'erb2haml'
+
+gem 'font-awesome-sass'
