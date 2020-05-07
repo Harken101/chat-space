@@ -21,6 +21,10 @@ $select-skyblue:#38aef0;
         align-items: center;
         line-height: 100px;
         padding: 0 20px;
+        .icon{
+          color:white;
+          margin-left: 0.3rem;
+        }
       }
     &__btn{
       display: inline-block;
