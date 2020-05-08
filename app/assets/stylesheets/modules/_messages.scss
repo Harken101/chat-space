@@ -89,6 +89,7 @@ $select-skyblue:#38aef0;
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
       padding: 46px 40px;
+      overflow: scroll;
       &__message{
         padding-bottom: 40px;
         &__up{
@@ -117,39 +118,41 @@ $select-skyblue:#38aef0;
       height: 90px;
       background-color: #d2d2d2;
       padding: 20px 40px;
-      &__new{
+      &__mask{
         display: flex;
-        &__inputbox{
-          position: relative;
-          width: 100%;
-          .inputbox__text{
-            height: 50px;
-            width: 100%;
-            padding: 0 40px 0 10px;
-            color: $select-glay2;
-            border-style: none;
-          }
-          .inputbox__image{
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            .inputbox__image__file{
-              display: none;
-            }
-          }
-        }
-        .submit-btn{
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: $select-skyblue;
-          color: white;
+        position: relative;
+        width: 100%;
+        .mask__image{
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
           cursor: pointer;
+          .mask__image__file{
+            display: none;
+          }
         }
       }
+      .new_message{
+        display: flex;
+        .inputbox__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: $select-glay2;
+          border-style: none;
+          }
+          }
+          .submit-btn{
+            width: 100px;
+            height: 50px;
+            padding: 0 30px;
+            margin-left: 15px;
+            background-color: $select-skyblue;
+            color: white;
+            cursor: pointer;
+          }
+        }
+          
+      }
     }
- }
-}

@@ -2,12 +2,13 @@
   .mainbox__header0
     .mainbox__header0__info
       .mainbox__header0__info--groupname 
-        test
+        = @group.name
       .mainbox__header0__info--member
         Member：
-        User
+        - @group.users.each do |user|
+          = user.name
     .mainbox__header0__info1
-      = link_to "#", class: "mainbox__header0__info1--edit" do 
+      = link_to edit_group_path(@group.id), class: "mainbox__header0__info1--edit" do
         .mainbox__header0__info1--edit--btn 
           Edit
   .mainbox__list
@@ -18,13 +19,13 @@
         .mainbox__list__message__up--data
           2020/05/06(Wed) 11:37:25
       .mainbox__list__message--text
-        message
+        = render @messages
   .mainbox__form
-    .mainbox__form__new
-      .mainbox__form__new__inputbox
-        %input{type: "text", class: "inputbox__text", placeholder: "type a message"}
-        %label{class: "inputbox__image"}
-          = icon("fas","image")
-          %input{type: "file", class: "inputbox__image__file"}
-      %input{type: "submit", class: "submit-btn", value: "Send"}
+    = form_for [@group, @message] do |f|
+      .mainbox__form__mask
+        = f.text_field :content, class: 'inputbox__text', placeholder: 'type a message'
+        = f.label :image, class: 'mask__image' do
+          = icon('fas', 'image', class: 'mask__image')
+          = f.file_field :image, class: 'mask__image__file'
+      = f.submit 'Send', class: 'submit-btn'
 
