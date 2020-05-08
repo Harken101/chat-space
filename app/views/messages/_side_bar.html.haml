@@ -2,12 +2,16 @@
   .sidebox__namebox  
     %p
       = current_user.name
-    %div
-      = link_to "#", class: "sidebox__btn" do
-        = icon('far', 'edit')
+    .icon
+      = link_to new_group_path do
+        = icon('far', 'edit', class: 'icon')
       = link_to edit_user_path(current_user) do
         = icon('fas', 'cog', class: 'icon')
   .sidebox__groups
-    .sidebox__groups__group
-      .sidebox__groups__group--name group
-      .sidebox__groups__group--message メッセージ
+    - current_user.groups.each do |group|
+      .sidebox__groups__group
+        = link_to '#' do
+          .sidebox__groups__group--name
+            = group.name
+          .sidebox__groups__group--message
+            メッセージはまだありません。

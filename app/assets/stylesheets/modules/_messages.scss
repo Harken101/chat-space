@@ -24,25 +24,22 @@ $select-skyblue:#38aef0;
         .icon{
           color:white;
           margin-left: 0.3rem;
+          text-decoration: none;
         }
       }
-    &__btn{
-      display: inline-block;
-      color:white;
-      margin-left: 0.3rem;
-    }
     &__groups{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       &__group{
-        color: white;
         margin-bottom: 40px;
         padding: 20px 20px;
         &--name{
+          color: white;
           font-size: 15px;
           margin-bottom: 5px;
         }
         &--message{
+          color: white;
           font-size: 11px;
           margin-bottom: 5px;
         }
