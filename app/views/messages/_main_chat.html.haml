@@ -12,14 +12,7 @@
         .mainbox__header0__info1--edit--btn 
           Edit
   .mainbox__list
-    .mainbox__list__message
-      .mainbox__list__message__up
-        .mainbox__list__message__up--user
-          user
-        .mainbox__list__message__up--data
-          2020/05/06(Wed) 11:37:25
-      .mainbox__list__message--text
-        = render @messages
+    = render @messages
   .mainbox__form
     = form_for [@group, @message] do |f|
       .mainbox__form__mask
