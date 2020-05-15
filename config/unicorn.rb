@@ -8,7 +8,7 @@ worker_processes 1
 working_directory "#{app_path}/current"
 
 #アプリケーションの設置されているディレクトリを指定
-working_directory app_path
+# working_directory app_path
 
 # それぞれ、sharedの中を参照するよう変更
 listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
