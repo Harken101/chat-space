@@ -3,14 +3,14 @@
     %p
       = current_user.name
     .icon
-      = link_to new_group_path do
+      = link_to new_group_path, class: "link1" do
         = icon('far', 'edit', class: 'icon')
-      = link_to edit_user_path(current_user) do
+      = link_to edit_user_path(current_user), class: "link1" do
         = icon('fas', 'cog', class: 'icon')
   .sidebox__groups
     - current_user.groups.each do |group|
       .sidebox__groups__group
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group), class: "link2" do
           .sidebox__groups__group--name
             = group.name
           .sidebox__groups__group--message
